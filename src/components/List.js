@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import issues from '../../issues';
+import { issues } from '../../issues';
 
 const List = () => {
 
@@ -19,8 +19,6 @@ const List = () => {
 
     return (
         <View>
-            <Text>Open issues</Text>
-
             {openIssues.map(issue => (
                 <View key={issue.id}>
                     <Text>ID: {extractId(issue.id)}</Text>
