@@ -14,7 +14,7 @@ const List = () => {
         issues
           .filter(issue => issue.status == 'Open')
           .map(issue => (
-            <View>
+            <View key={issue.id}>
               <Text>Id: {extractId(issue.id)}</Text>
               <Text>Omschrijving: {issue.description}</Text>
               <Text>Toegewezen aan: {toUpper(issue.assigned)}</Text>
@@ -23,7 +23,7 @@ const List = () => {
           ))
       }
     </View>
-  );  
+  );
 }
 
 export default List;
